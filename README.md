@@ -20,8 +20,8 @@ It starts as a simple RSI-based and progressively evolves into a multi-strategy 
 ## TODO
 
 ### 🧮 Analytics & Backtesting
-[ ] Offline backtesting with historical data  
-[ ] Performance metrics: win rate, profit factor, Sharpe ratio  
+[] Offline backtesting with historical data  
+[] Performance metrics: win rate, profit factor, Sharpe ratio  
 [ ] Export logs/statistics (CSV/JSON)  
 [ ] Strategy comparison dashboard  
 
