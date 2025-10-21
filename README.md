@@ -1,57 +1,92 @@
-Trader — Algorithmic trading helpers for MetaTrader5
+# Simple Forex Trading Bot (MetaTrader 5 + Python)
 
-Overview
+This project is a **personal forex trading bot** built on **MetaTrader5 (MT5)** and **Python**.  
+It starts as a simple RSI-based and progressively evolves into a multi-strategy trading system (bollinger bands, moving-averages)
 
-This repository contains small Python utilities and trading strategy modules intended to help automate trading on MetaTrader 5 (MT5). It includes initialization and order helpers, basic risk-management utilities, and several example strategies (RSI, MACD, Bollinger, etc.). The code is lightweight and intended as a starting point for building and testing algorithmic strategies with MT5.
+---
 
-Contents
+## 🚀 Features
 
-- `main.py` — Entry script (example runner) that ties initialization and strategy execution together.
-- `config.py` — Configuration constants and settings used across the project.
-- `trading/mt5_initialize.py` — MT5 connection/initialization helpers.
-- `trading/orders.py` — Order placement and wrapper functions for interacting with MT5.
-- `trading/risk.py` — Risk management utilities (position sizing, stop-loss/take-profit helpers).
-- `strategies/` — Example strategy modules:
-  - `rsi.py` — RSI-based entry/exit logic.
-  - `macd.py` — MACD-based strategy.
-  - `mac.py` — Moving-average crossover strategy.
-  - `bollinger.py` — Bollinger Bands strategy.
-- `utils/utils.py` — Small helper functions used by strategies and trading modules.
+### 🎯 Core Trading
+- **MetaTrader 5 integration** — Direct trade execution through MT5 API.  
+- **Multi-strategy engine** — Supports multiple trading strategies:
+  - RSI oversold/overbought entries.
+  - Bollinger Bands for mean-reversion opportunities.
+  - Moving Average crossover trend detection.
+- **Adaptive scheduling** — Dynamic control of trade frequency and symbol scanning.
 
-Quickstart
+### 💰 Risk Management
+- Configurable **max daily drawdown** and **stop trading on loss** rules.  
+- Dynamic and trailing **stop-loss / take-profit** levels.  
 
-1. Create and activate a Python virtual environment (recommended):
+### 🧮 Analytics & Backtesting
+- Offline **backtesting module** using historical price data.  
+- Calculates performance metrics (win rate, profit factor, Sharpe ratio).  
+- Exportable logs and trade statistics (CSV/JSON).  
+- Strategy comparison dashboard (optional web UI).
 
-   powershell
-   python -m venv .venv; .\.venv\Scripts\Activate.ps1
+### 📰 News & Sentiment Filtering
+- Integrates with economic calendar APIs (e.g., ForexFactory, Investing.com).  
+- Suspends trading during high-impact events.  
+- AI-powered **sentiment analysis** on financial news and headlines.  
 
-2. Install dependencies (create `requirements.txt` if not present):
+---
 
+## 📂 Project Structure
+```
+MT5-AutoTrader/
+│
+├── config.py               # Global configuration (symbols, lots, timeframes, etc.)
+├── main.py                 # Entry point — runs the trading loop
+├── README.md
+├── requirements.txt
+│
+├── strategies/             # All trading strategy modules
+│   ├── rsi.py              # RSI-based overbought/oversold logic
+│   ├── macd.py             # MACD crossover momentum strategy (undone)
+│   ├── bollinger.py        # Bollinger Bands mean reversion strategy
+│   ├── mac.py              # Moving Average crossover strategy
+│   └── __init__.py         # Package exports (import strategies cleanly)
+│
+├── trading/                # Core trading engine
+│   ├── mt5_initialize.py   # MetaTrader 5 connection setup & shutdown
+│   ├── orders.py           # Order execution logic (buy/sell)
+│   ├── risk.py             # Risk and position sizing management
+│   └── __init__.py         # Package exports for trading helpers
+│
+├── utils/                  # Shared utility modules
+│   ├── utils.py            # Helper functions (indicators, logging, etc.)
+│   └── __init__.py         # Package exports for utilities
+│
+```
+
+---
+
+## ⚙️ Installation
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/0abdelilah/MT5-AutoTrader
+   cd forex-bot
+   ```
+
+2. **Install dependencies**
+   ```bash
    pip install -r requirements.txt
+   ```
 
-   Suggested packages (if you don't have a `requirements.txt` yet):
-   - MetaTrader5
-   - pandas
-   - numpy
-   - pytz
+3. **Set up MetaTrader 5**
+   - Install the MT5 desktop app and log into a **demo account**.
+   - Keep MT5 running while using this bot.
 
-3. Configure `config.py` with your MT5 account details and preferences.
-
-4. Initialize MT5 and run the example in `main.py`:
-
+4. **Run the bot**
+   ```bash
    python main.py
+   ```
 
-Notes
+---
 
-- This project assumes you have MT5 installed and a valid account configured.
-- Use a demo account while testing automated strategies.
-- Review and adjust risk settings in `trading/risk.py` before using live funds.
-
-Troubleshooting
-
-- "Failed to initialize MT5": check that MT5 is installed and the account details in `config.py` are correct.
-- "ModuleNotFoundError" or missing dependencies: install packages from `requirements.txt` or see the Suggested packages list above.
-
-License
-
-Add your license information here (e.g., MIT).
+## 📈 Disclaimer
+This bot is for **educational and research purposes only**.
+Trading forex involves significant risk of loss.
+Always test using **demo accounts** before considering any live deployment.
