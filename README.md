@@ -20,15 +20,15 @@ It starts as a simple RSI-based and progressively evolves into a multi-strategy 
 ## TODO
 
 ### 🧮 Analytics & Backtesting
-- Offline backtesting with historical data  
-- Performance metrics: win rate, profit factor, Sharpe ratio  
-- Export logs/statistics (CSV/JSON)  
-- Strategy comparison dashboard  
+[ ] Offline backtesting with historical data  
+[ ] Performance metrics: win rate, profit factor, Sharpe ratio  
+[ ] Export logs/statistics (CSV/JSON)  
+[ ] Strategy comparison dashboard  
 
 ### 📰 News & Sentiment
-- Integrate economic calendars (ForexFactory, Investing.com)  
-- Pause trading during high-impact events  
-- AI-driven sentiment analysis on news/headlines
+[ ] Integrate economic calendars (ForexFactory, Investing.com)  
+[ ] Pause trading during high-impact events  
+[ ] AI-driven sentiment analysis on news/headlines
 
 ## 📂 Project Structure
 ```
