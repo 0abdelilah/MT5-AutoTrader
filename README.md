@@ -6,29 +6,29 @@ It starts as a simple RSI-based and progressively evolves into a multi-strategy 
 ## 🚀 Features
 
 ### 🎯 Core Trading
-- **MetaTrader 5 integration** — Direct trade execution through MT5 API.  
-- **Multi-strategy engine** — Supports multiple trading strategies:
-  - RSI oversold/overbought entries.
-  - Bollinger Bands for mean-reversion opportunities.
-  - Moving Average crossover trend detection.
-- **Adaptive scheduling** — Dynamic control of trade frequency and symbol scanning.
+- [x] **MetaTrader 5 integration** — Direct trade execution through MT5 API.  
+- [x] **Multi-strategy engine** — Supports multiple trading strategies:
+  - [x] RSI oversold/overbought entries.
+  - [x] Bollinger Bands for mean-reversion opportunities.
+  - [x] Moving Average crossover trend detection.
+- [x] **Adaptive scheduling** — Dynamic control of trade frequency and symbol scanning.
 
 ### 💰 Risk Management
-- Configurable **max daily drawdown** and **stop trading on loss** rules.  
-- Dynamic and trailing **stop-loss / take-profit** levels.  
+- [x] Configurable **max daily drawdown** and **stop trading on loss** rules.  
+- [x] Dynamic and trailing **stop-loss / take-profit** levels.  
 
 ## TODO
 
 ### 🧮 Analytics & Backtesting
-[] Offline backtesting with historical data  
-[] Performance metrics: win rate, profit factor, Sharpe ratio  
-[ ] Export logs/statistics (CSV/JSON)  
-[ ] Strategy comparison dashboard  
+- [ ] Offline backtesting with historical data
+- [ ] Performance metrics: win rate, profit factor, Sharpe ratio
+- [ ] Export logs/statistics (CSV/JSON)
+- [ ] Strategy comparison dashboard  
 
 ### 📰 News & Sentiment
-[ ] Integrate economic calendars (ForexFactory, Investing.com)  
-[ ] Pause trading during high-impact events  
-[ ] AI-driven sentiment analysis on news/headlines
+- [ ] Integrate economic calendars (ForexFactory, Investing.com)  
+- [ ] Pause trading during high-impact events  
+- [ ] AI-driven sentiment analysis on news/headlines
 
 ## 📂 Project Structure
 ```
