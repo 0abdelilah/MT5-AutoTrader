@@ -3,8 +3,6 @@
 This project is a **personal forex trading bot** built on **MetaTrader5 (MT5)** and **Python**.  
 It starts as a simple RSI-based and progressively evolves into a multi-strategy trading system (bollinger bands, moving-averages)
 
----
-
 ## 🚀 Features
 
 ### 🎯 Core Trading
@@ -19,18 +17,18 @@ It starts as a simple RSI-based and progressively evolves into a multi-strategy 
 - Configurable **max daily drawdown** and **stop trading on loss** rules.  
 - Dynamic and trailing **stop-loss / take-profit** levels.  
 
+## TODO
+
 ### 🧮 Analytics & Backtesting
-- Offline **backtesting module** using historical price data.  
-- Calculates performance metrics (win rate, profit factor, Sharpe ratio).  
-- Exportable logs and trade statistics (CSV/JSON).  
-- Strategy comparison dashboard (optional web UI).
+- Offline backtesting with historical data  
+- Performance metrics: win rate, profit factor, Sharpe ratio  
+- Export logs/statistics (CSV/JSON)  
+- Strategy comparison dashboard  
 
-### 📰 News & Sentiment Filtering
-- Integrates with economic calendar APIs (e.g., ForexFactory, Investing.com).  
-- Suspends trading during high-impact events.  
-- AI-powered **sentiment analysis** on financial news and headlines.  
-
----
+### 📰 News & Sentiment
+- Integrate economic calendars (ForexFactory, Investing.com)  
+- Pause trading during high-impact events  
+- AI-driven sentiment analysis on news/headlines
 
 ## 📂 Project Structure
 ```
@@ -60,8 +58,6 @@ MT5-AutoTrader/
 │
 ```
 
----
-
 ## ⚙️ Installation
 
 1. **Clone the repo**
@@ -83,8 +79,6 @@ MT5-AutoTrader/
    ```bash
    python main.py
    ```
-
----
 
 ## 📈 Disclaimer
 This bot is for **educational and research purposes only**.
